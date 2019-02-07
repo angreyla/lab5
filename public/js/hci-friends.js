@@ -8,16 +8,20 @@ $(document).ready(function() {
 /*
  * Function that is called when the document is ready.
  */
-function initializePage() {
-	console.log("Javascript connected!");
-}
+ function initializePage() {
+ 	console.log("Javascript connected!");
+ 	$('.name').click( function (event){
+ 		event.preventDefault();
+ 		$(this).text(anagrammedName($(this).text()));
+   });
+ }
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
-	
+
 	if (name == "Doug Engelbart") {
 		return "Notable Grudge";
-	} 
+	}
 	else if (name == "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
